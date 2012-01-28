@@ -1,0 +1,94 @@
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/server_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/white_border">
+    <ScrollView android:id="@+id/ScrollView01"
+        android:layout_width="fill_parent"
+        android:layout_height="200dp">
+    <RelativeLayout
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layout_width="320dp"
+        android:paddingLeft="7dp"
+        android:paddingRight="7dp"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/server_label"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:textColor="#000000"
+            android:text="Server"/>
+        <EditText
+            android:id="@+id/server_port"
+            android:layout_height="wrap_content"
+            android:layout_width="80dp"
+            android:numeric="decimal"
+            android:singleLine="true"
+            android:layout_gravity="bottom"
+            android:layout_below="@id/server_label"
+            android:layout_alignParentRight="true"
+            android:maxLength="4"            
+            android:hint="port"/>
+        <EditText
+            android:id="@+id/server_address"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:singleLine="true"
+            android:layout_below="@id/server_label"
+            android:layout_toLeftOf="@id/server_port"
+            android:hint="server url"/>
+        <EditText
+            android:id="@+id/server_directory"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:singleLine="true"
+            android:layout_below="@id/server_address"
+            android:hint="server directory"/>
+        <RadioGroup
+            android:id="@+id/server_type"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="bottom"            
+            android:layout_below="@id/server_directory">
+            <RadioButton android:id="@+id/radio_ftp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:text="FTP" />
+            <RadioButton android:id="@+id/radio_sftp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:textColor="#000000"
+            android:text="SFTP" />
+            <RadioButton android:id="@+id/radio_dropbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:text="dropbox" />
+        </RadioGroup>
+        <EditText android:id ="@+id/ftp_user"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:singleLine="true"
+            android:layout_below="@id/server_type"
+            android:hint="username"/>
+        <EditText android:id ="@+id/ftp_password"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:password="true"
+            android:layout_gravity="bottom"
+            android:singleLine="true"
+            android:layout_below="@id/ftp_user"
+            android:hint="password"/>
+    </RelativeLayout>
+    </ScrollView>
+</LinearLayout>

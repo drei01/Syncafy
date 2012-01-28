@@ -1,0 +1,33 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/server_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/white_border">
+<RelativeLayout
+        android:layout_width="320dp"
+        android:layout_height="wrap_content">
+        <Button
+             android:id="@+id/pickDirectory"
+             android:layout_height="wrap_content"
+             android:layout_width="wrap_content"
+             android:text="Select Directory"
+             android:onClick="pickDirectory"
+             android:layout_alignParentRight="true"/>
+        <EditText
+            android:id="@+id/selectedDirectory"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:layout_toLeftOf="@id/pickDirectory"
+            android:hint="folder"/>
+         <CheckBox android:id="@+id/isRecursive"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:layout_below="@id/pickDirectory"
+            android:checked="true"
+            android:text="Recursive"
+            android:visibility="gone" />
+    </RelativeLayout>
+</LinearLayout>

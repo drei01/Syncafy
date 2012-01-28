@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout android:id="@+id/LinearLayout01"
+ android:background="@drawable/main_background"
+ android:layout_width="fill_parent"
+ android:layout_height="fill_parent"
+ xmlns:android="http://schemas.android.com/apk/res/android"
+ xmlns:app="http://schemas.android.com/apk/res/org.codefish.fixturefeed">
+     <com.github.ysamlan.horizontalpager.HorizontalPager
+          android:id="@+id/dirfile_view"
+          android:layout_width="fill_parent"
+          android:layout_height="60dp"
+          android:layout_gravity="top"
+          android:layout_marginTop="5dp"
+          android:fadingEdge="none"
+          android:scrollbars="none"/>
+      <ImageView android:src="@drawable/arrow"
+      android:layout_centerHorizontal="true"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/dirfile_view"
+      />
+      <com.github.ysamlan.horizontalpager.HorizontalPager android:id="@+id/schedule_sync"
+        android:layout_height="50dp"
+        android:layout_width="fill_parent"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_alignParentBottom="true"
+        android:scrollbars="none">
+            <Button
+            android:id="@+id/sync"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:text="Sync"
+            android:onClick="sync"/>
+            <Button
+            android:id="@+id/schedule"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:text="Schedule"
+            android:onClick="schedule"/>
+      </com.github.ysamlan.horizontalpager.HorizontalPager>
+      <com.github.ysamlan.horizontalpager.HorizontalPager
+          android:id="@+id/server_view"
+          android:layout_width="fill_parent"
+          android:layout_height="220dp"
+          android:layout_gravity="bottom"
+          android:layout_above="@id/schedule_sync"
+          android:fadingEdge="none"
+          android:scrollbars="none"/>
+</RelativeLayout>
